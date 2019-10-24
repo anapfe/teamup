@@ -22,7 +22,7 @@ class MatchesTableSeeder extends Seeder
       ];
 
       foreach( $matches as $match => $props ) {
-        $sport = \App\Match::create([
+        $match = \App\Match::create([
           "sport_id" => $props[0],
           "date" => $props[1],
           "place" => $props[2],

@@ -207,7 +207,6 @@ h1 {
 	max-width: 40px;
 	border-radius: 50%;
 	overflow: hidden;
-	margin-bottom: 10px;
 }
 .foto-perfil img {
 	width: 100%;
@@ -217,8 +216,8 @@ h1 {
 .buscador-mobile-btn {
 	display: block;
 	margin: 10px auto;
-	width: 100%;
-	padding: 10px;
+	width: 250px;
+	padding: 6px;
 	background-color: #30499B;
 	color: white;
 	text-transform: uppercase;
@@ -254,6 +253,7 @@ h1 {
 	margin-top: 0;
 	margin-left: auto;
 	margin-right: auto;
+	height:100%
 }
 .btn-solid-lg {
 	width: 250px;
@@ -319,6 +319,11 @@ h1 {
 	color: #333333;
 	margin-right: 5px;
 }
+.buscador-form {
+	height:40px;
+	width:60%;
+	text-align: center;
+}
 
 /* SLIDER  ------------------------------- */
 .slider {
@@ -371,13 +376,13 @@ h1 {
 }
 .evento_deporte {
 	font-weight: 500;
-	font-size: 4em;
+	font-size: 1.5em;
 	text-transform: uppercase;
 	margin-bottom: 4px;
 	max-width: 100px;
 }
 .evento_zona {
-	font-size: 3em;
+	font-size: 1em;
 	font-weight: 400;
 }
 .overlay {
@@ -416,7 +421,7 @@ h1 {
 	width: 32%;
 }
 .lista-prox-part li {
-	/* flex-basis: 98%; */
+	flex-basis: 98%;
 	margin:0;
 }
 .deporte {
@@ -540,16 +545,10 @@ input[type="file"] {
 	max-width: 250px;
 	margin: 0 auto;
 }
-.legals {
+.legals, .legals2 {
 	text-align: left;
 	max-width: 250px;
 	margin: 10px auto;
-}
-.legals2 {
-	text-align: left;
-	max-width: 250px;
-	margin: 0 auto;
-	height: 100px;
 }
 .recordarme {
 	max-width: 250px;
@@ -621,7 +620,7 @@ input[type="file"] {
 /* USER DASHBOARD ------------------------------- */
 .dashSection {
 	position: relative;
-	width: 100%;
+	width: 90%;
 }
 .dashTitle {
 	display: inline;
@@ -647,10 +646,7 @@ input[type="file"] {
 	display: flex;
 	justify-content: space-between;
 	flex-wrap: wrap;
-}
-.matches-container:after {
-	content: "";
-	width: 30%;
+	width:100%;
 }
 .container-match {
 	height: 100px;
@@ -660,7 +656,7 @@ input[type="file"] {
 	border: 1px solid lightgrey;
 }
 .top {
-	height: 53%;
+	height: 50%;
 }
 .overlay-match {
 	width: 100%;
@@ -724,7 +720,6 @@ input[type="file"] {
 	height: 45px;
 	border-radius: 50%;
 	z-index: 3;
-	object-fit: contain;
 }
 .countMobile {
 	display: inline;
@@ -768,7 +763,7 @@ input[type="file"] {
 	color: black;
 }
 .info-match p:last-child {
-	margin-top: 5px;
+	margin-top: 0;
 }
 .plus {
 	border-radius: 50%;
@@ -783,6 +778,7 @@ input[type="file"] {
 	font-size: 2em;
 	text-align: center;
 	color: white;
+	z-index: 5;
 }
 .plus:hover {
 	background-color: #d87a0e;
@@ -793,12 +789,14 @@ input[type="file"] {
 .bottom {
 	display: none;
 	width: 100%;
-	height: 100%;
-	background-size: contain;
+	height: 46%;
+	position: absolute;
+	bottom: 0;
+	background-size: cover;
 }
 .views-likes {
 	position: relative;
-	bottom: -100px;
+	bottom: -102px;
 	left: 20px;
 	color: white;
 }
@@ -816,19 +814,21 @@ input[type="file"] {
 
 /* FOOTER ------------------------------- */
 .footer_outer {
-	max-width: 1170px;
-	width: 90%;
+	max-width: 1140px;
+	width: 100%;
 	margin: 0 auto;
-	padding-top: 40px;
-	margin-bottom: 40px;
+	padding: 0 0 20px;
 	overflow: hidden;
-	display: flex;
-	justify-content: space-between;
-	font-size: 0.8em;
 }
 .footer_outer h3 {
 	font-size: 0.6em;
 	margin-top: 0px;
+}
+.footer_inner {
+	display: flex;
+	margin: 0 auto;
+	padding: 0 15px;
+	justify-content: space-between;
 }
 footer .logo {
 	width: 20%;
@@ -854,30 +854,49 @@ footer .enlaces {
 	padding-top: 3px;
 	font-size: 0.5em;
 }
-.redes {
-	width: 33.3%;
-	text-align: right;
+footer .redes {
+	width:100%;
+	overflow: hidden;
+	box-sizing: border-box;
+	margin-bottom: 10px;
+	margin: 10 auto;
+	padding: 0 15px;
 }
-.redes a {
-	margin-left: 5px;
-}
-.legales {
+footer .redes ul {
+	overflow: hidden;
 	display: flex;
-	width: 33.3%;
+	align-items: center;
+	justify-content:center;
+	height: 30px;
 }
-.legales li {
-	margin: 0 0 5px 0;
+footer .redes li {
+	display: inline;
+	margin-right: 20px;
+	float: left;
+	font-size: 1.5em;
 }
-
-.copyright {
-	width: 33.3%;
-	text-align: center;
+footer .redes li:last-child {
+	margin-right: 0;
+}
+footer .legales {
+	box-sizing: border-box;
+	overflow: hidden;
+}
+footer .legales ul {
+	display: flex;
+}
+footer .legales li {
+	margin-right: 10px;
+	font-size: 0.6em;
+}
+footer .copyright {
 }
 .copyright p {
 	display: block;
 	overflow: hidden;
 	text-align: center;
 	margin: 0 auto;
+	font-size: 0.5em;
 }
 
 /* FORMS ------------------------------- */
@@ -961,11 +980,20 @@ table {
 
 /* PROFILE */
 .left-nav {
-	display: none;
+	width:90%
 }
+
+
+.dashMenu {
+	text-align:center;
+}
+
 .flexbox {
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: space-around;
+	flex-direction: column;
+    align-items: center;
 }
 .flexboxNoWrap {
 	display: flex;
@@ -974,8 +1002,8 @@ table {
 .buscar {
 	width: 150px;
 	border: 1px solid #30499B;
-	margin-bottom: 30px;
-	padding: 6px;
+	margin-bottom: 20px;
+    padding: 10px;
 	display: inline-block;
 	font-size: 0.8em;
 }
@@ -984,20 +1012,21 @@ table {
 	display: inline;
 }
 .main-item {
-	font-size: 0.9em;
+	font-size: 1.2em;
 	color: #30499B;
 	font-weight: 600;
 	margin-bottom: 10px;
 }
 .dropdown-left {
 	margin-bottom: 20px;
-	width: 150px;
+
 }
 .dropdown-left li {
-	font-size: 0.9em;
+	font-size: 1em;
 	color: black;
 	padding: 6px;
 	margin-left: 5px;
+	height: 25px;
 }
 .dropdown-left li:hover {
 	color: white;
@@ -1007,20 +1036,15 @@ table {
 /* MEDIA QUERIES ------------------------------- */
 @media (min-width: 420px) {
 	.nav-items {
+		margin-right: 18px;
 	}
-
+	.nav-items:last-child {
+		margin-right: 18px;
+	}
 	.nav-items a {
 		font-size: 0.6em;
 	}
-	.container-match {
-		height: 300px;
-		width: 30%;
-		margin-right: 5%;
-		margin-bottom: 40px;
-	}
-	.container-match:nth-child(3n) {
-		margin-right: 0;
-	}
+
 	.bottom {
 		display: block;
 	}
@@ -1033,7 +1057,7 @@ table {
 	}
 	.info-match {
 		position: absolute;
-		top: 90px;
+		top: 100px;
 	}
 	.info-match p {
 		padding: 5px;
@@ -1068,26 +1092,24 @@ table {
 		font-size: 1em;
 		justify-content: center;
 	}
-	.buscador-form {
-		display: flex;
-	}
-	.footer_outer {
-		width: 100%;
-		margin: 0 auto;
-		font-size: 1em;
-		display: flex;
-		justify-content: space-around;
+	.container-match {
+		height: 300px;
+		width: 250px;
+		//margin-right: 5%;
 		margin-bottom: 40px;
+	}
+	.container-match:nth-child(3n) {
+		margin-right: 0;
 	}
 	.footer_outer h3 {
 		font-size: 0.8em;
 		margin-bottom: 5px;
 	}
-	.footer_links {
+	.foot_links {
 		font-size: 0.65em;
 	}
-	footer .legales li {
-		display: inline;
+	.copyright p {
+		font-size: 0.65em;
 	}
 	.lista-prox-part li {
 		flex-basis: 48%;
@@ -1095,180 +1117,183 @@ table {
 	.faq_card {
 		width: 33%;
 	}
-}
-
-@media (min-width: 768px) {
-	header {
-		justify-content: center;
-		margin: 25px 0;
-	}
-	.head-left {
-		display: inline;
-		width: 25%;
-	}
-	.logo {
-		width: 180px;
-	}
-	h1 {
-		padding: 0 10px;
-		align-self: baseline;
-		width: 500px;
-	}
-	.burger-icon {
-		display: none;
-	}
-	.nav-items {
-		margin-right: 18px;
-	}
-	.menu ul {
-		display: flex;
-		justify-content: flex-end;
-		flex-wrap: wrap;
-	}
-	.nav-items {
-		margin: 0;
-		margin-right: 18px;
-	}
-	.mega {
-		height: 60vh;
-	}
-	.mega h2 {
-		font-size: 4em;
-		max-width: 600px;
-		padding-bottom: 10px;
-	}
-	.caja {
-		max-width: 300px;
-	}
-	.create-match {
-		position: relative;
-		right: 20px;
-		margin: 60px 0 0 0;
-	}
-	.section_tit {
-		margin-top: 50px;
-		text-align: center;
-		font-size: 1.2em;
-		margin-bottom: 20px;
-		color: #F3A530;
-	}
-	.buscador select {
-		width: 80%;
-		border: 0;
-		margin-right: 10px;
-	}
-	.btn-solid {
-		max-width: 280px;
-		font-size: 1.1em;
-	}
-	.header_link {
-		display: inline-block;
-	}
-	.evento {
-		display: table-cell;
-		padding-right: 10px;
-		width: 20%;
-	}
-	.evento:first-child {
-		display: table-cell;
-	}
-	.evento:last-child {
-		padding-right: 0;
-		width: 19%;
-	}
-	.evento_deporte {
-		font-size: 1.5em;
-	}
-	.evento_zona {
-		font-size: 1em;
-	}
-	.flechas {
-		top: 25%;
-	}
-	.flechas .fa {
-		color: white;
-		font-size: 1em;
-	}
-	.login_img {
-		background-image: url("../images/login_img.jpg");
-		background-size: cover;
-		padding-top: 50px;
-		padding-bottom: 50px;
-	}
-	.register_img {
-		background-image: url("../images/register_img.jpg");
-		background-size: cover;
-		padding-top: 50px;
-		padding-bottom: 50px;
-	}
-	.profile_icon {
-		width: 45%;
-	}
-	.faq_img {
-		background-image: url("../images/faq_img.jpg");
-		padding-top: 50px;
-		padding-bottom: 50px;
-	}
-	footer .redes {
-		/* margin-bottom: 20px; ;*/
-		display: inline
-	}
-	footer .redes ul{
-		height: 40px;
-	}
-	.footer_outer h3 {
-		font-size: 0.9em;
-		margin-bottom: 5px;
-	}
-	.foot_links {
-		font-size: 0.75em;
-	}
-	.copyright p {
-		display: inline;
-	}
-	footer .legales li {
-		font-size: 0.8em;
-	}
-	.lista-prox-part li {
-		flex-basis: 32%;
-		margin:0;
-	}
-	.evento {
-		display: table-cell;
-		padding-right: 10px;
-		width: 20%;
-	}
-	.evento:last-child {
-		padding-right: 0;
-		width: 19%;
-	}
-	.left-nav {
-		overflow: hidden;
-		align-items: flex-start;
-		display: inline;
-		width: 20%;
-	}
 	.dashSection {
-		width: 80%;
+		width: 95%;
 	}
-	.list-partidos {
-		width: 80%;
-	}
-	.info-match p:last-child {
-		margin-top: 0px;
-	}
-}
 
-@media (min-width: 1200px) {
-	.container {
-		width: 1170px;
-	}
-	.matches-container {
-		justify-content: space-between;
-		display: flex;
-	}
-	.sport-heading {
-		width: 60%;
-		font-size: 1.6em;
-	}
 }
+	@media (min-width: 768px) {
+		header {
+			justify-content: center;
+			margin: 25px 0;
+		}
+		.head-left {
+			display: inline;
+			width: 25%;
+		}
+		.logo {
+			width: 180px;
+		}
+		h1 {
+			padding: 0 10px;
+			align-self: baseline;
+			width: 500px;
+		}
+		.burger-icon {
+			display: none;
+		}
+		.nav-items {
+			margin-right: 18px;
+		}
+		.menu ul {
+			display: flex;
+			justify-content: flex-end;
+			flex-wrap: wrap;
+		}
+		.nav-items {
+			margin: 0;
+			margin-right: 18px;
+		}
+		.mega {
+			height: 60vh;
+		}
+		.mega h2 {
+			font-size: 4em;
+			max-width: 600px;
+			padding-bottom: 10px;
+		}
+		.caja {
+			max-width: 300px;
+		}
+		.create-match {
+			position: relative;
+			right: 20px;
+			margin: 60px 0 0 0;
+		}
+		.section_tit {
+			margin-top: 50px;
+			text-align: center;
+			margin-bottom: 20px;
+			color: #F3A530;
+		}
+		.buscador select {
+			width: 50%;
+			border: 0;
+			height:100%
+
+		}
+		.container-match {
+			//flex-basis: 30%
+
+		}
+		.btn-solid {
+			max-width: 280px;
+			font-size: 1.1em;
+		}
+		.header_link {
+			display: inline-block;
+		}
+		.evento {
+			display: table-cell;
+			padding-right: 10px;
+			width: 20%;
+		}
+		.evento:first-child {
+			display: table-cell;
+		}
+		.evento:last-child {
+			padding-right: 0;
+			width: 19%;
+		}
+		.flechas {
+			top: 25%;
+		}
+		.flechas .fa {
+			color: white;
+			font-size: 1em;
+		}
+		.login_img {
+			background-image: url("../images/login_img.jpg");
+			background-size: cover;
+			padding-top: 50px;
+			padding-bottom: 50px;
+		}
+		.register_img {
+			background-image: url("../images/register_img.jpg");
+			padding-top: 50px;
+			padding-bottom: 50px;
+		}
+		.profile_icon {
+			width: 45%;
+		}
+		.faq_img {
+			background-image: url("../images/faq_img.jpg");
+			padding-top: 50px;
+			padding-bottom: 50px;
+		}
+		footer .redes {
+			margin-bottom: 20px;
+		}
+		footer .redes ul{
+			height: 40px;
+		}
+		.footer_outer {
+			padding-top: 20px;
+		}
+		.footer_outer h3 {
+			font-size: 0.9em;
+			margin-bottom: 5px;
+		}
+		.foot_links {
+			font-size: 0.75em;
+		}
+		.copyright p {
+			font-size: 0.75em;
+		}
+		footer .legales li {
+			font-size: 0.8em;
+		}
+		.lista-prox-part li {
+			flex-basis: 32%;
+			margin:0;
+		}
+		.evento {
+			display: table-cell;
+			padding-right: 10px;
+			width: 20%;
+		}
+		.evento:last-child {
+			padding-right: 0;
+			width: 19%;
+		}
+		.left-nav {
+			overflow: hidden;
+			align-items: flex-start;
+			display: inline;
+			width: 20%;
+		}
+		.list-partidos {
+			width: 80%;
+		}
+		.dashSection {
+			width: 80%;
+		}
+		.flexbox {
+			flex-direction: row;
+			align-items: flex-start; */
+		}
+	}
+
+
+	@media (min-width: 1200px) {
+		.container {
+			width: 1170px;
+		}
+		/* .matches-container {
+			justify-content: flex-start;
+		} */
+		.sport-heading {
+			width: 60%;
+			font-size: 1.6em;
+		}
+	}

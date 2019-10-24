@@ -7,7 +7,11 @@
 @section('content')
   <div class="container section">
     <div class="controls">
-      <a href="/partidos_orderByDate">Ordenar por Fecha</a>
+      <select class="">
+        <option value=""><a href="#">Ordenar</a></option>
+        <option value=""><a href="#">Por Nombre</a></option>
+        <option value=""><a href="#">Por Fecha</a></option>
+      </select>
     </div>
 
     <div class="matches-container">

@@ -186,6 +186,4 @@
   <div class="container section">
     <button class="btn-solid" type="submit" name="ver_mas">VER MÁS PARTIDOS</button>
   </div>
-
-
 @endsection
